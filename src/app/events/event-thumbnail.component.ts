@@ -10,10 +10,9 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
       <div>Price: $ {{ event.price }}</div>
       <div>
         <span>Location: {{ event.location.address }}</span>
-        <span></span>
+        <span class="pad-left"></span>
         <span>{{ event.location.city }}, {{ event.location.country }}</span>
       </div>
-      <button class="btn btn-primary" (click)="handleClick()">Click me</button>
     </div>
   `,
 })
