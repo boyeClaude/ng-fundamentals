@@ -7,7 +7,7 @@
       <event-thumbnail
         [event]="event"
         (onHandleClick)="handleEventClicked($event)"
-        #thumbnail
+        (click)="handleThumbnailClicked(event?.name)"
       ></event-thumbnail>
     </div>
   </div>
