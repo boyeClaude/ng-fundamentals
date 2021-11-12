@@ -1,4 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { IEvent } from '../shared/event.model';
 
 @Component({
   selector: 'event-thumbnail',
@@ -17,7 +18,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
       <div *ngIf="event?.location">
         <span>Location: {{ event?.location?.address }}</span>
         <span class="pad-left"></span>
-        <span>{{ event?.location.city }}, {{ event?.location?.country }}</span>
+        <span>{{ event?.location?.city }}, {{ event?.location?.country }}</span>
       </div>
     </div>
   `,
@@ -25,7 +26,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./event-thumbnail.component.css'],
 })
 export class EventThumbnailComponent implements OnInit {
-  @Input('event') event: any;
+  @Input('event') event!: IEvent;
   @Output() onHandleClick: any = new EventEmitter();
 
   constructor() {}
