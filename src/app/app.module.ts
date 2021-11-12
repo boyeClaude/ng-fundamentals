@@ -3,17 +3,19 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 /** components */
-import { AppComponent } from './app.component';
-import { EventThumbnailComponent } from './events/event-thumbnail.component';
-import { EventsListComponent } from './events/events-list.component';
 import { NavbbarComponent } from './nav/navbar.component';
-import { EventDetailsComponent } from './event-details/event-details.component';
+import { AppComponent } from './app.component';
 import { appRoutes } from './routes';
+import {
+  EventThumbnailComponent,
+  EventsListComponent,
+  EventDetailsComponent,
+  CreateEventComponent,
+} from './events/index';
 
 /** third parties libraries */
 import { ToastrModule } from 'ngx-toastr';
 import { RouterModule } from '@angular/router';
-import { CreateEventComponent } from './events/create/create-event.component';
 import { Error404Component } from './errors/404.component';
 import checkDirtyState from './utils/check-dirty-state';
 

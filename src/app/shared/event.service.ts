@@ -10,10 +10,9 @@ export class EventService {
     setTimeout(() => {
       subject.next(EVENTS);
       subject.complete();
-    }, 2000);
+    }, 100);
 
     return subject;
-    // return EVENTS;
   }
 
   getEvent(id: number) {
