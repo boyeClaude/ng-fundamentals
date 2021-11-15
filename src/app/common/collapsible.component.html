@@ -1,7 +1,7 @@
 <div (click)="toggleContent()" class="well pointable">
   <h4 class="well-title">
-    {{ title }}
+    <ng-content select="[well-title]"></ng-content>
   </h4>
   <!-- content goes here -->
-  <ng-content *ngIf="visible"></ng-content>
+  <ng-content *ngIf="visible" select="[well-body]"> </ng-content>
 </div>

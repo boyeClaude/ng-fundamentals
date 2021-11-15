@@ -5,7 +5,6 @@ import { Component, Input, OnInit } from '@angular/core';
   templateUrl: 'collapsible.component.html',
 })
 export class CollapsibleComponent implements OnInit {
-  @Input('title') title!: string | undefined;
   visible: boolean = true;
   constructor() {}
 
