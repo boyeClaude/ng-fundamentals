@@ -11,6 +11,8 @@ import {
   EventsListComponent,
   EventDetailsComponent,
   CreateEventComponent,
+  CreateSessionComponent,
+  SessionListComponent,
 } from './events/index';
 
 /** third parties libraries */
@@ -18,6 +20,8 @@ import { ToastrModule } from 'ngx-toastr';
 import { RouterModule } from '@angular/router';
 import { Error404Component } from './errors/404.component';
 import checkDirtyState from './utils/check-dirty-state';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CollapsibleComponent } from './common/collapsible-well.component';
 
 @NgModule({
   declarations: [
@@ -28,10 +32,15 @@ import checkDirtyState from './utils/check-dirty-state';
     EventDetailsComponent,
     CreateEventComponent,
     Error404Component,
+    CreateSessionComponent,
+    SessionListComponent,
+    CollapsibleComponent,
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    FormsModule,
+    ReactiveFormsModule,
     ToastrModule.forRoot(),
     RouterModule.forRoot(appRoutes),
   ],
@@ -44,13 +53,3 @@ import checkDirtyState from './utils/check-dirty-state';
   bootstrap: [AppComponent],
 })
 export class AppModule {}
-
-// use can create it in another file and imported here
-/*export default function checkDirtyState(component: CreateEventComponent) {
-  if (component.isDirty) {
-    return window.confirm(
-      'you have not saved the event, do you want to cancel?'
-    );
-  }
-  return true;
-}*/
