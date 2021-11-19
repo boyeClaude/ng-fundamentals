@@ -22,6 +22,7 @@ import { Error404Component } from './errors/404.component';
 import checkDirtyState from './utils/check-dirty-state';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CollapsibleComponent } from './common/collapsible-well.component';
+import { DurationPipe } from './shared/duration.pipe';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import { CollapsibleComponent } from './common/collapsible-well.component';
     CreateSessionComponent,
     SessionListComponent,
     CollapsibleComponent,
+    DurationPipe,
   ],
   imports: [
     BrowserModule,
