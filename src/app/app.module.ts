@@ -23,6 +23,7 @@ import checkDirtyState from './utils/check-dirty-state';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CollapsibleComponent } from './common/collapsible-well.component';
 import { DurationPipe } from './shared/duration.pipe';
+import { SimpleModalComponent } from './common/simple-modal.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import { DurationPipe } from './shared/duration.pipe';
     SessionListComponent,
     CollapsibleComponent,
     DurationPipe,
+    SimpleModalComponent,
   ],
   imports: [
     BrowserModule,
