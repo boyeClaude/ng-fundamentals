@@ -24,6 +24,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CollapsibleComponent } from './common/collapsible-well.component';
 import { DurationPipe } from './shared/duration.pipe';
 import { SimpleModalComponent } from './common/simple-modal.component';
+import { UpvoteComponent } from './event-details/upvote.component';
 
 @NgModule({
   declarations: [
@@ -39,6 +40,7 @@ import { SimpleModalComponent } from './common/simple-modal.component';
     CollapsibleComponent,
     DurationPipe,
     SimpleModalComponent,
+    UpvoteComponent,
   ],
   imports: [
     BrowserModule,
