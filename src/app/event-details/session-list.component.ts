@@ -26,7 +26,7 @@ export class SessionListComponent implements OnInit, OnChanges {
 
   ngOnInit() {}
 
-  ngOnChanges(changes: SimpleChanges): void {
+  ngOnChanges(): void {
     if (this.sessions) {
       this.filterSessions(this.filterBy);
       this.sortBy === 'name'
