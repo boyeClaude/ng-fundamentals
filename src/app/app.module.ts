@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http';
 
 /** components */
 import { NavbbarComponent } from './nav/navbar.component';
@@ -49,6 +50,7 @@ import { UpvoteComponent } from './event-details/upvote.component';
     ReactiveFormsModule,
     ToastrModule.forRoot(),
     RouterModule.forRoot(appRoutes),
+    HttpClientModule,
   ],
   providers: [
     {
