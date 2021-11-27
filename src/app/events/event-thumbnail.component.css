@@ -1,0 +1,11 @@
+.thumbnail {
+  min-height: 210px;
+}
+
+.green {
+  color: hsl(120, 100%, 25%) !important;
+}
+
+.bold {
+  font-weight: bold !important;
+}
