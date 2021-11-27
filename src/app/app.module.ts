@@ -17,7 +17,7 @@ import {
 
 /** third parties libraries */
 import { ToastrModule } from 'ngx-toastr';
-import { RouterModule } from '@angular/router';
+import { PreloadAllModules, RouterModule } from '@angular/router';
 import { Error404Component } from './errors/404.component';
 import checkDirtyState from './utils/check-dirty-state';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -48,7 +48,7 @@ import { UpvoteComponent } from './event-details/upvote.component';
     FormsModule,
     ReactiveFormsModule,
     ToastrModule.forRoot(),
-    RouterModule.forRoot(appRoutes),
+    RouterModule.forRoot(appRoutes, {preloadingStrategy:PreloadAllModules}),
   ],
   providers: [
     {
