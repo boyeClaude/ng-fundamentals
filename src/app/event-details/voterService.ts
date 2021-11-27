@@ -3,7 +3,6 @@ import { ISession } from '../shared/event.model';
 
 @Injectable({ providedIn: 'root' })
 export class VoterService {
-  constructor() {}
 
   deleteVoter(session: ISession, voterName: string) {
     session.voters = session.voters.filter((voter) => voter !== voterName);

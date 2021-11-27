@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { DebugElement } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { SessionListComponent } from '.';
@@ -29,6 +30,7 @@ describe('SessionListComponent', () => {
 
     fixture = TestBed.createComponent(SessionListComponent);
     component = fixture.componentInstance;
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     debugEl = fixture.debugElement;
     element = fixture.nativeElement;
   });

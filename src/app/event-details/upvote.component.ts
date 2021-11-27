@@ -1,4 +1,5 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+/* eslint-disable @typescript-eslint/no-explicit-any */
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'upvote',
@@ -18,7 +19,7 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
   styleUrls: ['./upvote.component.css'],
 })
-export class UpvoteComponent implements OnInit {
+export class UpvoteComponent {
   @Input() count!: number;
 
   @Input() set voted(val: any) {
@@ -29,9 +30,7 @@ export class UpvoteComponent implements OnInit {
 
   iconColor!: string;
 
-  constructor() {}
 
-  ngOnInit() {}
 
   onClick() {
     this.vote.emit({});

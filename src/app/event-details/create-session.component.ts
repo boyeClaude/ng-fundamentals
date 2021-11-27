@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ISession } from '../shared/event.model';
@@ -16,7 +17,6 @@ export class CreateSessionComponent implements OnInit {
   duration!: FormControl;
   level!: FormControl;
   abstract!: FormControl;
-  constructor() {}
 
   ngOnInit() {
     this.name = new FormControl('', Validators.required);
@@ -39,12 +39,13 @@ export class CreateSessionComponent implements OnInit {
   }
 
   private restrictedWord(words: any) {
+
     return (control: FormControl): { [key: string]: any } => {
       if (!words) {
         return [];
       }
 
-      let invalidWords = words
+      const invalidWords = words
         .map((w: any) => (control.value.includes(w) ? w : null))
         .filter((w: any) => w != null);
 
@@ -55,7 +56,7 @@ export class CreateSessionComponent implements OnInit {
   }
 
   onCreateSession(formValues: any) {
-    let session: ISession = {
+    const session: ISession = {
       id: 0,
       name: formValues?.name,
       presenter: formValues?.presenter,

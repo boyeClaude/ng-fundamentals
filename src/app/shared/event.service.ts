@@ -1,13 +1,13 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { EventEmitter, Injectable } from '@angular/core';
 import { Observable, Subject } from 'rxjs';
 import { IEvent, ISession } from './event.model';
 
 @Injectable({ providedIn: 'root' })
 export class EventService {
-  constructor() {}
 
   getEvents(): Observable<IEvent[]> {
-    let subject = new Subject<IEvent[]>();
+    const subject = new Subject<IEvent[]>();
     setTimeout(() => {
       subject.next(EVENTS);
       subject.complete();
@@ -27,12 +27,12 @@ export class EventService {
   }
 
   updateEvent(event: any) {
-    let index = EVENTS.findIndex((x) => (x.id = event.id));
+    const index = EVENTS.findIndex((x) => (x.id = event.id));
     EVENTS[index] = event;
   }
 
   searchSessions(searchTerm: string) {
-    let term = searchTerm.toLocaleLowerCase();
+    const term = searchTerm.toLocaleLowerCase();
     let results: ISession[] = [];
 
     EVENTS.forEach((event) => {
@@ -48,7 +48,7 @@ export class EventService {
       results = results.concat(matchingSessions);
     });
 
-    let emitter = new EventEmitter(true);
+    const emitter = new EventEmitter(true);
     setTimeout(() => {
       emitter.emit(results);
     }, 100);

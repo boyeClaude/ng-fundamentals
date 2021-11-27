@@ -26,8 +26,8 @@ import { EventService } from '../shared/event.service';
 export class EventDetailsComponent implements OnInit {
   event!: IEvent;
   addMode!: boolean;
-  filterBy: string = 'all';
-  sortBy: string = 'votes';
+  filterBy = 'all';
+  sortBy = 'votes';
 
   constructor(
     private eventService: EventService,
@@ -36,7 +36,7 @@ export class EventDetailsComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    let myEvent = +this.route.snapshot.params['id'];
+    const myEvent = +this.route.snapshot.params['id'];
     this.event = this.eventService.getEvent(myEvent);
   }
 

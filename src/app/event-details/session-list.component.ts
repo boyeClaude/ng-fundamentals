@@ -2,8 +2,6 @@ import {
   Component,
   Input,
   OnChanges,
-  OnInit,
-  SimpleChanges,
 } from '@angular/core';
 import { ISession } from '../shared/event.model';
 import { AuthService } from '../user/login/auth.service';
@@ -13,7 +11,7 @@ import { VoterService } from './voterService';
   selector: 'session-list',
   templateUrl: 'session-list.component.html',
 })
-export class SessionListComponent implements OnInit, OnChanges {
+export class SessionListComponent implements  OnChanges {
   @Input('sessions') sessions!: ISession[] | undefined;
   @Input() filterBy!: string;
   visibleSessions: ISession[] | undefined = [];
@@ -24,7 +22,6 @@ export class SessionListComponent implements OnInit, OnChanges {
     private voterService: VoterService
   ) {}
 
-  ngOnInit() {}
 
   ngOnChanges(): void {
     if (this.sessions) {

@@ -1,11 +1,9 @@
-import { Component } from '@angular/core';
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { SessionListComponent } from '.';
 import { ISession } from '../shared/event.model';
-import { AuthService } from '../user/login/auth.service';
-import { VoterService } from './voterService';
+
 
 describe('SessionListComponent', () => {
-  // let authService: AuthService, voterService: VoterService;
   let component: SessionListComponent;
   let authService: any, voterService: any;
 

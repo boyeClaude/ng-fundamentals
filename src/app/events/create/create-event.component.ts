@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+/* eslint-disable @typescript-eslint/no-explicit-any */
+import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { EventService } from 'src/app/shared/event.service';
 
@@ -18,15 +19,13 @@ import { EventService } from 'src/app/shared/event.service';
     `,
   ],
 })
-export class CreateEventComponent implements OnInit {
-  isDirty: boolean = true;
+export class CreateEventComponent {
+  isDirty = true;
   newEvent!: any;
   constructor(private router: Router, private eventService: EventService) {}
 
-  ngOnInit() {}
 
   saveEvent(formValues: any) {
-    // console.log(formValues);
     this.eventService.saveEvent(formValues);
     this.isDirty = false;
     this.router.navigate(['/events']);

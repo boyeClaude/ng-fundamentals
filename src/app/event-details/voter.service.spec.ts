@@ -22,7 +22,7 @@ describe('VoterService', () => {
 
   describe('deleteVoter', () => {
     it('should filter remove the voter of the list of voters', () => {
-      let sessionOne = Object.assign({}, session);
+      const sessionOne = Object.assign({}, session);
 
       voterService.deleteVoter(sessionOne, sessionOne.name);
 
@@ -32,9 +32,9 @@ describe('VoterService', () => {
 
   describe('addVoter', () => {
     it('should add voter to the list of voter', () => {
-      const voterName: string = 'Doe';
+      const voterName = 'Doe';
 
-      let sessionTwo = Object.assign({}, session);
+      const sessionTwo = Object.assign({}, session);
 
       voterService.addVoter(sessionTwo, voterName);
 

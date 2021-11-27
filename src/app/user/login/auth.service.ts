@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { Injectable } from '@angular/core';
 import { IUser } from './user.model';
 
@@ -5,7 +6,6 @@ import { IUser } from './user.model';
 export class AuthService {
   currentUser!: IUser;
 
-  constructor() {}
 
   loginUser(username: string, password: string) {
     this.currentUser = {
